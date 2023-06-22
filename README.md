@@ -75,7 +75,7 @@ To run this project, follow these steps:
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/showmen78/Artificial-Neural-Network-from-Scratch.git
 ```
 
 2. Install the required dependencies. You can use `pip` to install them:

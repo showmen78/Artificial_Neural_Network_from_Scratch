@@ -136,14 +136,18 @@ class Ann:
             if self._type== 'multi_classification':
                 a= np.argmax(a,0)
                 y_pred= np.argmax(batch_y,0)
+                m+= a.shape[0]
                 
             if self._type == "binary_classification":
                 a=np.array(a>.5,dtype='float')
+                y_pred= batch_y
+                m+= a.shape[1]
                 
-            m += a.shape[0]  #add the sample number in each batch to calculate avg accuracy
+
+            #m += a.shape[0]  #add the sample number in each batch to calculate avg accuracy
             acc.append(np.sum(np.array(a==y_pred,dtype='float')))
 
-        
-        '''RETURN [ACCURACY, PREDICTED OUTPUT]'''
+    
         return [round(100*sum(acc)/m,2),predicted_output]
+       
        

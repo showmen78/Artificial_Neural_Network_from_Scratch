@@ -53,7 +53,7 @@ Y_test= np.array(Y_test)
 
 
 #iterations no
-iterations=10
+iterations=2
 #batch size for training
 batch_size=10
 
